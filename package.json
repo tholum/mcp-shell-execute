@@ -1,0 +1,38 @@
+{
+  "name": "mcp-shell-execute",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MCP Shell Command Execution Server",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "node --loader ts-node/esm src/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "shell",
+    "execute",
+    "command",
+    "modelcontextprotocol"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.3",
+    "zod": "^3.22.2",
+    "zod-to-json-schema": "^3.23.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.3"
+  }
+}
